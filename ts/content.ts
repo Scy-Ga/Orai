@@ -4,25 +4,45 @@ export default class Content {
 
     public content(req: http.IncomingMessage, res: http.ServerResponse): void {
         res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
-        res.write("<h1 style='color: red;'>Hello Node.js!</h1>");
-        res.write("<h1 style='color: green;'>Hello TypeScript!</h1>");
-        res.write("<h1 style='color: blue;'>Hello Herok!</h1>");
-        res.write("<h1 style='color: black;'>Hello Jedlik!</h1>");
+        // res.write("<h1 style='color: red;'>Hello Node.js!</h1>");
+        // res.write("<h1 style='color: green;'>Hello TypeScript!</h1>");
+        // res.write("<h1 style='color: blue;'>Hello Heroku!</h1>");
+        // res.write("<h1 style='color: black;'>Hello Jedlik!</h1>");
 
-        res.write("<b>Fejlesztői környezet telepítésének leírása, forráskód GitHub repository:</b><br>");
-        res.write("<a href='https://github.com/nitslaszlo/JedlikTsTemplate' target='_blank'>" +
-            "https://github.com/nitslaszlo/JedlikTsTemplate</a><br>");
+        // res.write("<b>Fejlesztői környezet telepítésének leírása, forráskód GitHub repository:</b><br>");
+        // res.write("<a href='https://github.com/nitslaszlo/JedlikTsTemplate' target='_blank'>" +
+        //     "https://github.com/nitslaszlo/JedlikTsTemplate</a><br>");
 
-
-        let i: number = 0;
+        res.write("<h3> A számok 1 - 10-ig Do - While ciklussal</h3><br> ");
+        let i: number = 1;
         do {
             res.write(i + `,`);
             i++;
-        } while (i >= 10);
+        } while (i <= 10);
+
+
+
+        res.write("<h3> A számok 1 - 10-ig While ciklussal</h3><br> ");
+       var f: number = 1;
+
+        while (f <= 10) {
+
+            res.write(f + `,`);
+            f++;
+
+        }
+
+        res.write("<h3> A számok 1 - 10-ig For ciklussal</h3><br> ");
+
+        for (let g = 1; g <= 10 ; g++) {
+
+            res.write(g + `,`);
+
+          }
+
 
 
         res.end();
     }
 }
-
 
