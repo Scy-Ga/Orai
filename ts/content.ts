@@ -49,6 +49,9 @@ export default class Content {
 
           res.write("<img height = 100 src = https://cdn.newsapi.com.au/image/v1/baa78e55168b70c08147f44f0d66cd0e?width=1024></img>");
 
+          res.write("<br><br>");
+
+          res.write("<img height = 100 src = ./a></img>");
         res.end();
     }
 }
