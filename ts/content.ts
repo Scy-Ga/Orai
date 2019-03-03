@@ -41,6 +41,13 @@ export default class Content {
           }
 
 
+          res.write("<br><br>");
+
+
+// tslint:disable-next-line: max-line-length
+// tslint:disable-next-line: align
+
+          res.write("<img height = 100 src = https://cdn.newsapi.com.au/image/v1/baa78e55168b70c08147f44f0d66cd0e?width=1024></img>");
 
         res.end();
     }
